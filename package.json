@@ -1,5 +1,5 @@
 {
-  "name": "${PROJECT_NAME}",
+  "name": "Backend_journey",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",

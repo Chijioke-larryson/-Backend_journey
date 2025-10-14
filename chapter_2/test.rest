@@ -1,0 +1,21 @@
+### TEST GET / WEBSITE
+GET http://localhost:2003
+
+### TEST GET /dashboard WEBSITE
+GET http://localhost:2003/dashboard
+
+### DATA ENDPOINT
+GET http://localhost:2003/api/data
+
+### DATA ENDPOINT FOR ADDING A USER
+POST http://localhost:2003/api/data
+Content-Type: application/json
+
+{
+           "name": "larryson"
+
+
+}
+
+### DELETE ENDPOINT
+DELETE http://localhost:2003/api/data
