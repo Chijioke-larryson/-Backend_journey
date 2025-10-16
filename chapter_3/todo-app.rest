@@ -10,8 +10,8 @@ Content-Type: application/json
 
 
 {
-"username": "john@gmail.com",
-"password": "123123123"
+"username": "gift@gmail.com",
+"password": "123123"
 
 }
 
@@ -23,8 +23,8 @@ Content-Type: application/json
 
 
 {
-  "username": "john@gmail.com",
-  "password": "123123123"
+  "username": "gift@gmail.com",
+  "password": "123123"
 
 }
 
