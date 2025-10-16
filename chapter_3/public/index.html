@@ -252,6 +252,7 @@
         isLoading = true
         const response = await fetch(apiBase + 'todos', {
             headers: { 'Authorization': token }
+
         })
         const todosData = await response.json()
         todos = todosData
@@ -267,6 +268,9 @@
                 'Content-Type': 'application/json',
                 'Authorization': token
             },
+
+
+
             body: JSON.stringify({ task: todos.find(val => val.id === index).task, completed: 1 })
         })
         fetchTodos()
@@ -279,6 +283,8 @@
             headers: {
                 'Authorization': token
             },
+
+
         })
         fetchTodos()
     }
@@ -296,6 +302,9 @@
                 'Content-Type': 'application/json',
                 'Authorization': token
             },
+
+
+
             body: JSON.stringify({ task })
         })
         todoInput.value = ''

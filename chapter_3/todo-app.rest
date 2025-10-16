@@ -30,3 +30,30 @@ Content-Type: application/json
 
 
 ###
+GET http://localhost:5000/todos
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzYwNjQ3OTU3LCJleHAiOjE3NjA3MzQzNTd9.BjncDmlCwC6TJ0LPsYwySqfW8NjusJiCpnUp1MX_Rvw
+###
+POST http://localhost:5000/todos
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzYwNjQ3OTU3LCJleHAiOjE3NjA3MzQzNTd9.BjncDmlCwC6TJ0LPsYwySqfW8NjusJiCpnUp1MX_Rvw
+
+Content-Type: application/json
+
+{
+"task" : "FInished coding the projects"
+
+}
+
+###
+PUT http://localhost:5000/todos/2?page=4
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzYwNjQ3OTU3LCJleHAiOjE3NjA3MzQzNTd9.BjncDmlCwC6TJ0LPsYwySqfW8NjusJiCpnUp1MX_Rvw
+
+Content-Type: application/json
+
+
+
+{
+"completed": true
+
+}
+
+

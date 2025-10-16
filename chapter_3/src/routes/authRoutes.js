@@ -28,16 +28,18 @@ VALUES  (?, ?)`)
         insertTodo.run(result.lastInsertRowid, defaultTodo)
 
 
-        const token = jwt.sign({id: result.lastInsertRowid}, process.env.JWT_SECRET, { expiresIn: '24hr'})
+        const token = jwt.sign({id: result.lastInsertRowid}, process.env.JWT_SECRET, { expiresIn: '24h'})
         res.json({ token})
 
 
     }catch (err) {
-        console.log(err.message)
-        res.sendStatus(503)
+        console.error('Register error:', err.message)
+        if (err.message.includes('UNIQUE constraint failed: users.username')) {
+            return res.status(400).json({ error: 'Username already exists. Please choose another one.' });
+        }
 
+        res.status(500).json({ error: 'Server error', details: err.message })
     }
-
 
 
 
@@ -72,11 +74,11 @@ router.post('/login', (req, res) => {
 
 
     }catch (err) {
-
-        console.log(err.message)
-        res.sendStatus(503)
-
+        console.error('Login error:', err.message)
+        res.status(500).json({ error: 'Server error', details: err.message })
     }
+
+
 
 })
 
