@@ -1,5 +1,5 @@
 {
-  "name": "chapter_3",
+  "name": "chapter_4",
   "version": "1.0.0",
   "main": "index.js",
   "type": "module",
@@ -11,7 +11,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "Fullstack to-do application that uses a nodejs backend a SQLite database and JWT authentication",
+  "description": "A dockerized Fullstack application that uses a Nodejs backend, a PostgreSQL database , a Prisma ORM  and JWT authentication",
   "dependencies": {
     "bcryptjs": "^3.0.2",
     "express": "^5.1.0",
