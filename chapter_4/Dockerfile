@@ -3,7 +3,7 @@ FROM node:22-alpine
 
 
 # Set the working Dir in the container
-WORKDIR/app
+WORKDIR  /app
 
 
 
@@ -12,10 +12,10 @@ COPY package*.json .
 
 
 # Install the dependencies
-RUN npm intall
+RUN npm install
 
 #Copy the rest of the application code
-Copy . .
+COPY . .
 
 
 # Expose the PORT that the app run on
